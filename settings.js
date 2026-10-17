@@ -21,6 +21,6 @@ window.homepageSettings = {
   statistics: {
     enabled: true,
     // Permitted hostnames for Busuanzi page view counter
-    hostnames: ['localhost', '127.0.0.1', 'github.io']
+    hostnames: ['localhost', '127.0.0.1', 'github.io', 'jack-liu0227.github.io']
   }
 };

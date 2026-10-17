@@ -15,7 +15,7 @@ window.homepageContent = {
       ],
       links: [
         { text: 'Google Scholar', url: 'https://scholar.google.com/citations?hl=en&user=jOu_s-sAAAAJ' },
-        { text: 'GitHub', url: 'https://github.com/' }
+        { text: 'GitHub', url: 'https://github.com/Jack-Liu0227' }
       ]
     },
     sections: {
@@ -132,7 +132,7 @@ window.homepageContent = {
       ],
       links: [
         { text: 'Google Scholar', url: 'https://scholar.google.com/citations?hl=en&user=jOu_s-sAAAAJ' },
-        { text: 'GitHub', url: 'https://github.com/' }
+        { text: 'GitHub', url: 'https://github.com/Jack-Liu0227' }
       ]
     },
     sections: {
