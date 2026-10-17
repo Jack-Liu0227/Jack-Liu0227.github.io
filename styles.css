@@ -231,6 +231,38 @@ main { min-width: 0; }
 }
 .publication-item strong { color: #0f172a; }
 
+.scholar-container {
+  margin-top: 16px;
+  text-align: center;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border: 1px dashed var(--primary-border);
+  border-radius: 6px;
+}
+.scholar-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.scholar-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 6px 18px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 112, 192, 0.15);
+  transition: all 0.15s ease;
+}
+.scholar-link-btn:hover {
+  background: var(--primary-hover);
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 112, 192, 0.25);
+}
+
 /* Footer */
 .site-footer { border-top: 1px solid var(--rule); padding: 24px 0 32px; color: var(--text-muted); font-size: 13px; text-align: center; }
 .visitor-count { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 28px; margin-bottom: 8px; }

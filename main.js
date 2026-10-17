@@ -4,7 +4,7 @@
   const content = window.homepageContent;
   const settings = window.homepageSettings;
   const languageKey = 'academic-homepage-language';
-  const sectionOrder = ['about', 'education', 'projects', 'agent_dev', 'publications', 'awards', 'interests'];
+  const sectionOrder = ['about', 'education', 'projects', 'publications', 'awards'];
   const main = document.getElementById('main-content');
   const languageButton = document.getElementById('language-switch');
   const status = document.getElementById('statistics-status');
@@ -56,7 +56,6 @@
   // Parse markdown-style [link](url), ***bold-italic***, **bold**, *italic*, and <span class="paper-tag">...</span>
   function parseFormattedText(text) {
     const fragment = document.createDocumentFragment();
-    // Matches: [link](url) | <span class="...">...</span> | ***bold-italic*** | **bold** | *italic*
     const pattern = /\[([^\]]+)\]\(([^\s)]+)\)|<span class="([^"]+)">([^<]+)<\/span>|\*\*\*([^*]+)\*\*\*|\*\*([^*]+)\*\*|\*([^*]+)\*/g;
     let cursor = 0;
     let match;
@@ -173,7 +172,7 @@
     heading.id = `${id}-title`;
     section.append(heading);
 
-    if (id === 'about' || id === 'interests') {
+    if (id === 'about') {
       const paragraphs = element('div', undefined, 'paragraphs');
       paragraphs.append(...data.paragraphs.map(linkedParagraph));
       section.append(paragraphs);
@@ -207,7 +206,7 @@
         return card;
       }));
       section.append(list);
-    } else if (id === 'projects' || id === 'agent_dev') {
+    } else if (id === 'projects') {
       const list = element('div', undefined, 'projects-list');
       list.append(...data.items.map(entry => {
         const card = element('div', undefined, 'resume-card');
@@ -262,6 +261,20 @@
         return item;
       }));
       section.append(list);
+
+      // Scholar full list link
+      if (data.scholarUrl) {
+        const footerBox = element('div', undefined, 'scholar-container');
+        if (data.scholarNote) {
+          footerBox.append(element('div', data.scholarNote, 'scholar-note'));
+        }
+        const btn = safeLink(data.scholarLinkText, data.scholarUrl);
+        if (btn) {
+          btn.className = 'scholar-link-btn';
+          footerBox.append(btn);
+        }
+        section.append(footerBox);
+      }
     } else if (id === 'awards') {
       const list = element('ul', undefined, 'history-list');
       list.append(...data.items.map(entry => {
