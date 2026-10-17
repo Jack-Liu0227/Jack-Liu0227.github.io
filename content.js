@@ -248,23 +248,23 @@ window.homepageContent = {
         ]
       },
       awards: {
-        title: '荣誉奖励',
+        title: 'Honors & Awards',
         items: [
-          { period: '2025.07', institution: '西安交通大学人工智能先导计划——“火山杯”三等奖', detail: '' },
-          { period: '2025', institution: '波尔 + Scimaster 科研智能体开发大赛 优秀奖', detail: '文献调研到实验方案推荐一体化平台' },
-          { period: '2023 — 2024', institution: '西安交通大学 校级一等学业奖学金', detail: '' },
-          { period: '2022', institution: '国家授权发明专利：《一种基于 3D 打印的锌空气电池复合正极的制备方法》', detail: '第二发明人，已授权' },
-          { period: '2019 — 2021', institution: '国家励志奖学金（两届连获）', detail: '教育部颁发 (2019-2020, 2020-2021)' }
+          { period: '2025.07', institution: '3rd Prize, AI Initiative "Volcano Cup", Xi\'an Jiaotong University', detail: '' },
+          { period: '2025', institution: 'Excellence Award, Boer + Scimaster Scientific AI Agent Development Contest', detail: 'Literature-to-Experiment Integrated Platform' },
+          { period: '2023 - 2024', institution: 'First-Class Academic Scholarship, Xi\'an Jiaotong University', detail: '' },
+          { period: '2022', institution: 'Authorized National Invention Patent: A method for preparing 3D-printed composite cathode for zinc-air batteries', detail: 'Second Inventor, Granted' },
+          { period: '2019 - 2021', institution: 'National Encouragement Scholarship (Consecutive 2 Years)', detail: 'Ministry of Education of China (2019-2020, 2020-2021)' }
         ]
       }
     },
     labels: {
-      skip: '跳到正文', photo: '照片', email: '电子邮箱', phone: '联系电话',
-      navigation: '栏目导航', profile: '个人资料', unfilled: '待补充',
-      pageViews: '访问次数', viewUnit: '次', visitors: '访客人数', visitorUnit: '人',
-      statisticsLoading: '访问统计加载中…', statisticsUnavailable: '访问统计暂不可用',
-      logos: { xjtu: '西安交通大学', whut: '武汉理工大学' },
-      contentLabel: '研究内容：', methodLabel: '研究方法：', resultLabel: '工作成果：', courseLabel: '主修课程：'
+      skip: 'Skip to content', photo: 'Photo', email: 'Email', phone: 'Phone',
+      navigation: 'Page Navigation', profile: 'Personal Information', unfilled: 'TBD',
+      pageViews: 'Page Views', viewUnit: '', visitors: 'Visitors', visitorUnit: '',
+      statisticsLoading: 'Loading visitor statistics...', statisticsUnavailable: 'Visitor statistics unavailable',
+      logos: { xjtu: 'Xi\'an Jiaotong University', whut: 'Wuhan University of Technology' },
+      contentLabel: 'Research Focus: ', methodLabel: 'Methodology: ', resultLabel: 'Outcomes: ', courseLabel: 'Key Courses: '
     }
   }
 };

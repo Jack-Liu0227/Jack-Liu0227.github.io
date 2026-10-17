@@ -53,10 +53,10 @@
     }
   }
 
-  // Parse markdown-style [link](url), ***bold-italic***, **bold**, *italic*, and <span class="paper-tag">...</span>
+  // Parse markdown-style [link](url), ***bold-italic***, **bold**, *italic*, <span class="paper-tag">...</span>, and <sup>...</sup>
   function parseFormattedText(text) {
     const fragment = document.createDocumentFragment();
-    const pattern = /\[([^\]]+)\]\(([^\s)]+)\)|<span class="([^"]+)">([^<]+)<\/span>|\*\*\*([^*]+)\*\*\*|\*\*([^*]+)\*\*|\*([^*]+)\*/g;
+    const pattern = /\[([^\]]+)\]\(([^\s)]+)\)|<span class="([^"]+)">([^<]+)<\/span>|<sup>([^<]+)<\/sup>|\*\*\*([^*]+)\*\*\*|\*\*([^*]+)\*\*|(?<=\s|^|\(|（)\*(?!\s)([^*]+?)(?<!\s)\*(?=[\s,.;:!?）)]|$)/gu;
     let cursor = 0;
     let match;
 
@@ -73,16 +73,20 @@
         const span = element('span', match[4], match[3]);
         fragment.append(span);
       } else if (match[5] !== undefined) {
+        // <sup>text</sup>
+        const sup = element('sup', match[5]);
+        fragment.append(sup);
+      } else if (match[6] !== undefined) {
         // ***bold-italic***
         const strong = element('strong');
-        strong.append(element('em', match[5]));
+        strong.append(element('em', match[6]));
         fragment.append(strong);
-      } else if (match[6] !== undefined) {
-        // **bold**
-        fragment.append(element('strong', match[6]));
       } else if (match[7] !== undefined) {
+        // **bold**
+        fragment.append(element('strong', match[7]));
+      } else if (match[8] !== undefined) {
         // *italic*
-        fragment.append(element('em', match[7]));
+        fragment.append(element('em', match[8]));
       }
       cursor = pattern.lastIndex;
     }
