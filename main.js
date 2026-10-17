@@ -4,7 +4,7 @@
   const content = window.homepageContent;
   const settings = window.homepageSettings;
   const languageKey = 'academic-homepage-language';
-  const sectionOrder = ['about', 'research', 'education', 'experience', 'publications', 'awards'];
+  const sectionOrder = ['about', 'education', 'projects', 'agent_dev', 'publications', 'awards', 'interests'];
   const main = document.getElementById('main-content');
   const languageButton = document.getElementById('language-switch');
   const status = document.getElementById('statistics-status');
@@ -53,10 +53,11 @@
     }
   }
 
-  // Parse markdown-style [link](url), **bold**, and *italic*
+  // Parse markdown-style [link](url), ***bold-italic***, **bold**, *italic*, and <span class="paper-tag">...</span>
   function parseFormattedText(text) {
     const fragment = document.createDocumentFragment();
-    const pattern = /\[([^\]]+)\]\(([^\s)]+)\)|\*\*([^*]+)\*\*|\*([^*]+)\*/g;
+    // Matches: [link](url) | <span class="...">...</span> | ***bold-italic*** | **bold** | *italic*
+    const pattern = /\[([^\]]+)\]\(([^\s)]+)\)|<span class="([^"]+)">([^<]+)<\/span>|\*\*\*([^*]+)\*\*\*|\*\*([^*]+)\*\*|\*([^*]+)\*/g;
     let cursor = 0;
     let match;
 
@@ -69,11 +70,20 @@
         const a = safeLink(match[1], match[2]);
         fragment.append(a || document.createTextNode(match[0]));
       } else if (match[3] !== undefined) {
+        // <span class="...">text</span>
+        const span = element('span', match[4], match[3]);
+        fragment.append(span);
+      } else if (match[5] !== undefined) {
+        // ***bold-italic***
+        const strong = element('strong');
+        strong.append(element('em', match[5]));
+        fragment.append(strong);
+      } else if (match[6] !== undefined) {
         // **bold**
-        fragment.append(element('strong', match[3]));
-      } else if (match[4] !== undefined) {
+        fragment.append(element('strong', match[6]));
+      } else if (match[7] !== undefined) {
         // *italic*
-        fragment.append(element('em', match[4]));
+        fragment.append(element('em', match[7]));
       }
       cursor = pattern.lastIndex;
     }
@@ -94,16 +104,40 @@
     const profile = data.profile;
     document.getElementById('profile-name').textContent = profile.name;
     document.getElementById('profile-position').textContent = profile.position;
+
+    // Supervisor
+    const supEl = document.getElementById('profile-supervisor');
+    if (supEl) {
+      supEl.textContent = profile.supervisor;
+    }
+
+    // Badges
+    const badgesEl = document.getElementById('profile-badges');
+    if (badgesEl && profile.badges) {
+      badgesEl.replaceChildren(
+        ...profile.badges.map(b => element('span', b, 'profile-tag'))
+      );
+    }
+
+    // Affiliations
     document.getElementById('profile-affiliations').replaceChildren(
       ...profile.affiliations.map(text => element('p', text))
     );
+
+    // Emails
     document.getElementById('profile-emails').replaceChildren(
       ...profile.emails.map(email => {
-        const line = element('p');
-        line.append(safeLink(email.text || email.address, email.address ? `mailto:${email.address}` : '') || element('span', email.text));
-        return line;
+        return safeLink(email.text || email.address, email.address ? `mailto:${email.address}` : '') || element('span', email.text);
       })
     );
+
+    // Phone
+    const phoneEl = document.getElementById('profile-phone');
+    if (phoneEl) {
+      phoneEl.textContent = profile.phone || '';
+    }
+
+    // Links
     document.getElementById('profile-links').replaceChildren(
       ...profile.links.map(link => {
         const item = element('li');
@@ -112,6 +146,7 @@
       })
     );
 
+    // Portrait
     const portrait = document.getElementById('portrait');
     const placeholder = document.getElementById('portrait-placeholder');
     portrait.alt = profile.name;
@@ -127,28 +162,107 @@
     }
   }
 
-  function renderSection(id, data) {
+  function renderSection(id, data, labels) {
     if (!data) return element('div');
     const section = element('section', undefined, 'content-section');
     section.id = id;
     section.setAttribute('aria-labelledby', `${id}-title`);
-    const heading = element('h2', data.title);
+
+    // Solid blue badge heading matching resume PPTX
+    const heading = element('h2', data.title, 'section-badge-header');
     heading.id = `${id}-title`;
     section.append(heading);
 
-    if (id === 'about') {
+    if (id === 'about' || id === 'interests') {
       const paragraphs = element('div', undefined, 'paragraphs');
       paragraphs.append(...data.paragraphs.map(linkedParagraph));
       section.append(paragraphs);
-    } else if (id === 'research') {
-      const list = element('ul', undefined, 'research-list');
-      list.append(...data.items.map(text => {
-        const li = element('li');
-        li.append(parseFormattedText(text));
-        return li;
+    } else if (id === 'education') {
+      const list = element('div', undefined, 'education-list');
+      list.append(...data.items.map(entry => {
+        const card = element('div', undefined, 'resume-card');
+        const header = element('div', undefined, 'resume-card-header');
+        const titleArea = element('div', undefined, 'resume-card-title');
+        titleArea.append(element('span', undefined, 'item-square'), document.createTextNode(entry.institution));
+        header.append(titleArea, element('span', entry.period, 'resume-card-period'));
+
+        const body = element('div', undefined, 'resume-card-body');
+        const deg = element('div', undefined, 'resume-field');
+        deg.append(element('strong', entry.degree), document.createTextNode(' | ' + entry.gpa));
+        body.append(deg);
+
+        if (entry.supervisor) {
+          const sup = element('div', undefined, 'resume-field');
+          sup.append(parseFormattedText(entry.supervisor));
+          body.append(sup);
+        }
+
+        if (entry.courses) {
+          const crs = element('div', undefined, 'resume-field');
+          crs.append(parseFormattedText(entry.courses));
+          body.append(crs);
+        }
+
+        card.append(header, body);
+        return card;
       }));
       section.append(list);
-    } else if (id === 'education' || id === 'experience' || id === 'awards') {
+    } else if (id === 'projects' || id === 'agent_dev') {
+      const list = element('div', undefined, 'projects-list');
+      list.append(...data.items.map(entry => {
+        const card = element('div', undefined, 'resume-card');
+        const header = element('div', undefined, 'resume-card-header');
+        const titleArea = element('div', undefined, 'resume-card-title');
+        titleArea.append(element('span', undefined, 'item-square'), document.createTextNode(entry.title));
+        if (entry.role) {
+          const roleBadge = element('span', entry.role, 'paper-tag');
+          titleArea.append(roleBadge);
+        }
+        header.append(titleArea, element('span', entry.period, 'resume-card-period'));
+
+        const body = element('div', undefined, 'resume-card-body');
+
+        if (entry.content) {
+          const f1 = element('div', undefined, 'resume-field');
+          const lbl = element('span', labels.contentLabel, 'resume-field-label');
+          f1.append(lbl, parseFormattedText(entry.content));
+          body.append(f1);
+        }
+
+        if (entry.method) {
+          const f2 = element('div', undefined, 'resume-field');
+          const lbl2 = element('span', labels.methodLabel, 'resume-field-label');
+          f2.append(lbl2, parseFormattedText(entry.method));
+          body.append(f2);
+        }
+
+        if (entry.results && entry.results.length) {
+          const f3 = element('div', undefined, 'resume-field');
+          const lbl3 = element('span', labels.resultLabel, 'resume-field-label');
+          f3.append(lbl3);
+          const ul = element('ul', undefined, 'resume-results-list');
+          ul.append(...entry.results.map(res => {
+            const li = element('li');
+            li.append(parseFormattedText(res));
+            return li;
+          }));
+          f3.append(ul);
+          body.append(f3);
+        }
+
+        card.append(header, body);
+        return card;
+      }));
+      section.append(list);
+    } else if (id === 'publications') {
+      const list = element('div', undefined, 'publication-list');
+      list.append(...data.items.map(citation => {
+        const item = element('div', undefined, 'publication-item');
+        item.append(parseFormattedText(citation));
+        return item;
+      }));
+      section.append(list);
+    } else if (id === 'awards') {
       const list = element('ul', undefined, 'history-list');
       list.append(...data.items.map(entry => {
         const item = element('li');
@@ -164,10 +278,6 @@
         item.append(element('span', entry.period, 'history-period'), details);
         return item;
       }));
-      section.append(list);
-    } else if (id === 'publications') {
-      const list = element('div', undefined, 'publication-list');
-      list.append(...data.items.map(citation => linkedParagraph(citation)));
       section.append(list);
     }
     return section;
@@ -198,7 +308,7 @@
     languageButton.lang = language === 'zh' ? 'en' : 'zh-CN';
     languageButton.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
     renderProfile(data);
-    main.replaceChildren(...sectionOrder.map(id => renderSection(id, data.sections[id])));
+    main.replaceChildren(...sectionOrder.map(id => renderSection(id, data.sections[id], data.labels)));
     if (status) status.textContent = data.labels[statisticsState] || '';
   }
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="刘宇杰 | Yujie Liu 的学术主页">
+    <meta name="description" content="刘宇杰 | Yujie Liu 的学术主页 - 西安交通大学材料科学与工程学院">
     <meta name="color-scheme" content="light">
     <title>刘宇杰 | Yujie Liu</title>
     <link rel="icon" href="assets/favicons/favicon.ico" sizes="16x16 32x32 48x48">
@@ -19,10 +19,10 @@
       <header class="site-header">
         <div class="institution-logos">
           <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/logos/xjtu.png" width="64" height="64" alt="西安交通大学" data-logo="xjtu">
+            <img src="assets/logos/xjtu.png" width="56" height="56" alt="西安交通大学" data-logo="xjtu">
           </a>
           <a href="https://www.whut.edu.cn/" target="_blank" rel="noopener noreferrer">
-            <img src="assets/logos/whut.png" width="64" height="64" alt="武汉理工大学" data-logo="whut">
+            <img src="assets/logos/whut.png" width="56" height="56" alt="武汉理工大学" data-logo="whut">
           </a>
         </div>
         <p class="random-greeting" id="random-greeting" lang="en">Hello!</p>
@@ -31,23 +31,32 @@
 
       <nav class="section-nav" aria-label="栏目导航" id="section-nav">
         <a href="#about" data-section="about">个人简介</a>
-        <a href="#research" data-section="research">研究方向</a>
-        <a href="#education" data-section="education">教育经历</a>
-        <a href="#experience" data-section="experience">科研与项目经历</a>
+        <a href="#education" data-section="education">教育背景</a>
+        <a href="#projects" data-section="projects">项目经历</a>
+        <a href="#agent_dev" data-section="agent_dev">开发与学生工作</a>
         <a href="#publications" data-section="publications">学术论文</a>
         <a href="#awards" data-section="awards">荣誉奖励</a>
+        <a href="#interests" data-section="interests">兴趣爱好</a>
       </nav>
 
       <div class="page-body">
         <aside class="profile" aria-label="个人资料" id="profile">
           <div class="portrait-placeholder" id="portrait-placeholder" data-label="photo">照片</div>
-          <img class="portrait" id="portrait" width="180" height="225" alt="刘宇杰" hidden>
+          <img class="portrait" id="portrait" width="190" height="238" alt="刘宇杰" hidden>
           <h1 id="profile-name">刘宇杰</h1>
           <p id="profile-position">博士研究生（硕博连读）</p>
+          <div class="profile-supervisor" id="profile-supervisor">导师：Turab Lookman 教授 (APS Fellow)</div>
+          <div class="profile-badges" id="profile-badges"></div>
           <div class="affiliations" id="profile-affiliations"></div>
           <div class="contact">
-            <p data-label="email">电子邮箱</p>
-            <div id="profile-emails"></div>
+            <div class="contact-item">
+              <span class="contact-label" data-label="email">邮箱：</span>
+              <span id="profile-emails"></span>
+            </div>
+            <div class="contact-item" id="profile-phone-container">
+              <span class="contact-label" data-label="phone">电话：</span>
+              <span id="profile-phone">176-7117-1543</span>
+            </div>
             <ul class="profile-links" id="profile-links"></ul>
           </div>
         </aside>
