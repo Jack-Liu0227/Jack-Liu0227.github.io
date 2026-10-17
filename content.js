@@ -60,8 +60,8 @@ window.homepageContent = {
             content: '机器学习模型快速预测晶格热导率与力学弹性性质，大语言模型辅助超低晶格热导率硫属化物材料逆向设计。',
             method: '利用晶体图卷积网络（GNN）与深度卷积神经网络（CNN）训练性质预测模型，结合大语言模型实现新型功能晶体结构的筛选与逆向发现。',
             results: [
-              '**Liu, Y.**, et al. **LLM-Assisted Design of Ultralow-κ Chalcogenides**. ***Advanced Science***, 2026: e78175. [DOI: 10.1002/advs.78175](https://doi.org/10.1002/advs.78175) <span class="paper-tag">顶刊一作 · 匹配最新论文</span>',
-              '**Liu, Y.**, et al. **PINK: physical-informed machine learning for lattice thermal conductivity**. *Journal of Materials Informatics*, 2025, 5: 12. [DOI: 10.20517/jmi.2025.04](https://doi.org/10.20517/jmi.2025.04) | [arXiv:2503.17060](https://arxiv.org/abs/2503.17060) <span class="paper-tag">一作</span>',
+              '**Yujie Liu**, et al. **LLM-Assisted Design of Ultralow-κ Chalcogenides**. ***Advanced Science***, 2026: e78175. [DOI: 10.1002/advs.78175](https://doi.org/10.1002/advs.78175) <span class="paper-tag">顶刊一作 · 匹配最新论文</span>',
+              '**Yujie Liu**, et al. **PINK: physical-informed machine learning for lattice thermal conductivity**. *Journal of Materials Informatics*, 2025, 5: 12. [DOI: 10.20517/jmi.2025.04](https://doi.org/10.20517/jmi.2025.04) | [arXiv:2503.17060](https://arxiv.org/abs/2503.17060) <span class="paper-tag">一作</span>',
               '**刘宇杰#**，王振宇#，雷航#，张国宇，咸家伟，高志斌*，孙军，宋海峰，丁向东*. **卷积神经网络辅助无机晶体弹性性质预测**. *物理学报 (Acta Physica Sinica)*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">一作</span>'
             ]
           },
@@ -72,8 +72,8 @@ window.homepageContent = {
             content: '利用大语言模型增强金属材料性能预测与自主设计。',
             method: '利用通用大语言模型预测金属力学性能，结合最优传输（Optimal Transport）实现分布外（OOD）泛化；通过数据驱动和大模型结合实现新材料自主发现。',
             results: [
-              '**Lookman, Turab***, **Yujie Liu**, Zhibin Gao*. **Materials informatics: Emergence to autonomous discovery in the age of ai**. ***Advanced Materials***, 2026, 38(29): e2515941. [DOI: 10.1002/adma.202515941](https://doi.org/10.1002/adma.202515941)',
-              '**Liu, Yujie**, et al. **LLM Property Prediction and Out-of-Distribution Generalization for Alloys via Optimal Transport** (*Under review*, 2026)'
+              'Turab Lookman*, **Yujie Liu**, Zhibin Gao*. **Materials informatics: Emergence to autonomous discovery in the age of ai**. ***Advanced Materials***, 2026, 38(29): e2515941. [DOI: 10.1002/adma.202515941](https://doi.org/10.1002/adma.202515941)',
+              '**Yujie Liu**, et al. **LLM Property Prediction and Out-of-Distribution Generalization for Alloys via Optimal Transport** (*Under review*, 2026)'
             ]
           },
           {
@@ -218,8 +218,8 @@ window.homepageContent = {
             content: 'Rapid prediction of lattice thermal conductivity and elastic properties via machine learning models, and LLM-assisted inverse design of ultralow-κ chalcogenides.',
             method: 'Crystal graph convolutional networks (GNN) and convolutional neural networks (CNN) for property modeling, combined with foundation models for crystal screening and autonomous inverse discovery.',
             results: [
-              '**Liu, Y.**, et al. **LLM-Assisted Design of Ultralow-κ Chalcogenides**. ***Advanced Science***, 2026: e78175. [DOI: 10.1002/advs.78175](https://doi.org/10.1002/advs.78175) <span class="paper-tag">First Author · Top Journal</span>',
-              '**Liu, Y.**, et al. **PINK: physical-informed machine learning for lattice thermal conductivity**. *Journal of Materials Informatics*, 2025, 5: 12. [DOI: 10.20517/jmi.2025.04](https://doi.org/10.20517/jmi.2025.04) | [arXiv:2503.17060](https://arxiv.org/abs/2503.17060) <span class="paper-tag">First Author</span>',
+              '**Yujie Liu**, et al. **LLM-Assisted Design of Ultralow-κ Chalcogenides**. ***Advanced Science***, 2026: e78175. [DOI: 10.1002/advs.78175](https://doi.org/10.1002/advs.78175) <span class="paper-tag">First Author · Top Journal</span>',
+              '**Yujie Liu**, et al. **PINK: physical-informed machine learning for lattice thermal conductivity**. *Journal of Materials Informatics*, 2025, 5: 12. [DOI: 10.20517/jmi.2025.04](https://doi.org/10.20517/jmi.2025.04) | [arXiv:2503.17060](https://arxiv.org/abs/2503.17060) <span class="paper-tag">First Author</span>',
               '**Yujie Liu#**, Zhenyu Wang#, Hang Lei#, Guoyu Zhang, Jiawei Xian, Zhibin Gao*, Jun Sun, Haifeng Song, Xiangdong Ding*. **Convolutional neural network-assisted prediction of elastic properties of inorganic crystals** (卷积神经网络辅助无机晶体弹性性质预测). *Acta Phys. Sin.*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">First Author</span>'
             ]
           },
@@ -230,8 +230,8 @@ window.homepageContent = {
             content: 'LLM-enhanced property prediction and autonomous inverse discovery for alloy systems.',
             method: 'Utilizing foundation models to forecast mechanical behavior, incorporating optimal transport for out-of-distribution (OOD) generalization, and combining data-driven workflows for new alloy discovery.',
             results: [
-              '**Lookman, Turab***, **Yujie Liu**, Zhibin Gao*. **Materials informatics: Emergence to autonomous discovery in the age of ai**. ***Advanced Materials***, 2026, 38(29): e2515941. [DOI: 10.1002/adma.202515941](https://doi.org/10.1002/adma.202515941)',
-              '**Liu, Yujie**, et al. **LLM Property Prediction and Out-of-Distribution Generalization for Alloys via Optimal Transport** (*Under review*, 2026)'
+              'Turab Lookman*, **Yujie Liu**, Zhibin Gao*. **Materials informatics: Emergence to autonomous discovery in the age of ai**. ***Advanced Materials***, 2026, 38(29): e2515941. [DOI: 10.1002/adma.202515941](https://doi.org/10.1002/adma.202515941)',
+              '**Yujie Liu**, et al. **LLM Property Prediction and Out-of-Distribution Generalization for Alloys via Optimal Transport** (*Under review*, 2026)'
             ]
           },
           {
