@@ -7,7 +7,7 @@ window.homepageContent = {
       name: '刘宇杰',
       position: '博士研究生（硕博连读）',
       supervisor: '导师：Turab Lookman 教授（美国物理学会会士 APS Fellow）',
-      badges: ['中共党员', '英语 CET-6', 'GPA: 3.958/5', 'Vibe Coding', 'AI Agent', '材料信息学'],
+      badges: ['中共党员', '英语 CET-6', 'GPA: 3.958/5', '机器学习预测', '大模型逆向设计', 'AI Agent'],
       affiliations: [
         '西安交通大学 材料科学与工程学院',
         '金属材料强度国家重点实验室 / 多孔金属材料国家重点实验室'
@@ -26,7 +26,7 @@ window.homepageContent = {
         title: '个人简介',
         paragraphs: [
           '我是西安交通大学材料科学与工程学院硕博连读研究生，导师为 **Turab Lookman 教授**（美国物理学会会士 APS Fellow，前美国洛斯阿拉莫斯国家实验室资深科学家）。本科毕业于武汉理工大学新能源材料与器件专业（保研至西安交通大学）。',
-          '我的研究领域紧密围绕**材料信息学（Materials Informatics）**、**物理知情机器学习（Physics-Informed Machine Learning, PINK）**以及**大语言模型（LLMs）与 AI Agent 在材料科学中的应用**。致力于将物理领域知识（Domain Knowledge）、高通量计算与数据驱动算法相结合，重点解决材料晶格热导率、力学弹性模量的快速精准预测以及新型功能晶体结构的逆向智能生成与自主发现问题。已在 *Advanced Science*（第一作者）、*Advanced Materials*、*Applied Physics Letters* 等期刊发表多篇高水平论文。',
+          '我的主要研究方向为**机器学习模型预测**以及**大语言模型在材料中的性能预测与逆向设计**，紧密围绕材料信息学（Materials Informatics）前沿。致力于结合数据驱动算法、高通量计算与大语言模型（LLMs），解决先进无机材料与合金的关键性质预测、分布外泛化（OOD）及新型功能晶体结构的逆向自主发现问题。已在 ***Advanced Science***（第一作者）、***Advanced Materials***、***Applied Physics Letters*** 等国际期刊发表多篇高水平论文。',
           '学术之外：我热爱前沿 AI 技术的探索与 Vibe Coding 智能开发工作流，长期实践从单一 Agent 到多 Agent 协同任务看板架构，致力于打造端到端个人科研智能体（AI Agent）以实现自动化工作流；平时喜欢运动（篮球）和听音乐，保持积极乐观的生活态度。很高兴认识各位学术同仁与朋友，欢迎交流探讨！'
         ]
       },
@@ -55,21 +55,21 @@ window.homepageContent = {
         items: [
           {
             period: '2023.09 — 2025.09',
-            title: '可解释机器学习的晶格热导率预测与超低热导材料逆向设计',
+            title: '基于机器学习与大语言模型的材料性质预测与逆向设计',
             role: '课题负责人 / 核心研究员',
-            content: 'Domain Knowledge 结合机器学习与大语言模型方法简单快速预测晶格热导率，实现新型超低晶格热导率硫属化物材料逆向设计。',
-            method: '晶体图卷积训练弹性模量模型，将模型与物理知情（PINK）深度融合并设计网页端 APP，利用大语言模型辅助晶体结构筛选与逆向发现。',
+            content: '机器学习模型快速预测晶格热导率与力学弹性性质，大语言模型辅助超低晶格热导率硫属化物材料逆向设计。',
+            method: '利用晶体图卷积网络（GNN）与深度卷积神经网络（CNN）训练性质预测模型，结合大语言模型实现新型功能晶体结构的筛选与逆向发现。',
             results: [
               '**Liu, Y.**, et al. **LLM-Assisted Design of Ultralow-κ Chalcogenides**. ***Advanced Science***, 2026: e78175. [DOI: 10.1002/advs.78175](https://doi.org/10.1002/advs.78175) <span class="paper-tag">顶刊一作 · 匹配最新论文</span>',
               '**Liu, Y.**, et al. **PINK: physical-informed machine learning for lattice thermal conductivity**. *Journal of Materials Informatics*, 2025, 5: 12. [DOI: 10.20517/jmi.2025.04](https://doi.org/10.20517/jmi.2025.04) | [arXiv:2503.17060](https://arxiv.org/abs/2503.17060) <span class="paper-tag">一作</span>',
-              '**Liu, Y.**, et al. **Machine learning-driven elasticity prediction in advanced inorganic materials via convolutional neural networks**. *Acta Phys. Sin.*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">一作</span>'
+              '**刘宇杰#**，王振宇#，雷航#，张国宇，咸家伟，高志斌*，孙军，宋海峰，丁向东*. **卷积神经网络辅助无机晶体弹性性质预测**. *物理学报 (Acta Physica Sinica)*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">一作</span>'
             ]
           },
           {
             period: '2025.09 — 至今',
             title: '大语言模型在金属材料中的性能预测与设计',
             role: '课题核心研究员',
-            content: '大语言模型增强金属材料设计与性能预测。',
+            content: '利用大语言模型增强金属材料性能预测与自主设计。',
             method: '利用通用大语言模型预测金属力学性能，结合最优传输（Optimal Transport）实现分布外（OOD）泛化；通过数据驱动和大模型结合实现新材料自主发现。',
             results: [
               '**Lookman, Turab***, **Yujie Liu**, Zhibin Gao*. **Materials informatics: Emergence to autonomous discovery in the age of ai**. ***Advanced Materials***, 2026, 38(29): e2515941. [DOI: 10.1002/adma.202515941](https://doi.org/10.1002/adma.202515941)',
@@ -120,7 +120,7 @@ window.homepageContent = {
           '[1] **Yujie Liu**, Congran Jia, Yuzhou Hao, Xuejie Li, Yang Wang, Artem R. Oganov, Jun Sun, Xiangdong Ding, Turab Lookman*, Zhibin Gao*. **LLM-Assisted Design of Ultralow-κ Chalcogenides**. ***Advanced Science***, 2026: e78175. [DOI: 10.1002/advs.78175](https://doi.org/10.1002/advs.78175) <span class="paper-tag">第一作者 · 顶刊</span>',
           '[2] Turab Lookman*, **Yujie Liu**, Zhibin Gao*. **Materials Informatics: Emergence to Autonomous Discovery in the Age of AI**. ***Advanced Materials***, 2026, 38(29): e2515941. [DOI: 10.1002/adma.202515941](https://doi.org/10.1002/adma.202515941)',
           '[3] **Yujie Liu**, Xiaotian Wang, Yuzhou Hao, Xuejie Li, Jun Sun, Turab Lookman, Xiangdong Ding, Zhibin Gao*. **PINK: physical-informed machine learning for lattice thermal conductivity**. *Journal of Materials Informatics*, 2025, 5: 12. [DOI: 10.20517/jmi.2025.04](https://doi.org/10.20517/jmi.2025.04) | [arXiv:2503.17060](https://arxiv.org/abs/2503.17060) <span class="paper-tag">第一作者</span>',
-          '[4] **刘宇杰**, 王政, 雷鸿飞, 张高, 冼锦康, 高芝彬, 孙军, 宋辉, 丁向东*. **基于卷积神经网络驱动的先进无机材料弹性性能预测**. *物理学报 (Acta Physica Sinica)*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">第一作者</span>',
+          '[4] **刘宇杰#**，王振宇#，雷航#，张国宇，咸家伟，高志斌*，孙军，宋海峰，丁向东*. **卷积神经网络辅助无机晶体弹性性质预测**. *物理学报 (Acta Physica Sinica)*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">第一作者</span>',
           '[5] Yuzhou Hao, **Yujie Liu**, Xuejie Li, Turab Lookman, Xiangdong Ding, Jun Sun, Zhibin Gao*. **LLM-driven discovery for carbon allotropes with bond-network entropy**. *Applied Physics Letters*, 2026, 128(10): 102103. [DOI: 10.1063/5.0298765](https://doi.org/10.1063/5.0298765)',
           '[6] Xuejie Li, Yuzhou Hao, **Yujie Liu**, Xiaotian Wang, Turab Lookman, Jun Sun, Xiangdong Ding, Zhibin Gao*. **Same-group element replacement enhances superconductivity in clathrate-like YH4**. *The Journal of Chemical Physics*, 2025, 163(10): 104702. [DOI: 10.1063/5.0289123](https://doi.org/10.1063/5.0289123)',
           '[7] Yang Wang, Xiaotian Wang, Yuzhou Hao, Xuejie Li, **Yujie Liu**, Jun Sun, Xiangdong Ding, Zhibin Gao*. **Strain-engineering the lattice thermal conductivity of 2D kagome silica**. *Applied Physics Letters*, 2025, 126(7): 072201. [DOI: 10.1063/5.0253456](https://doi.org/10.1063/5.0253456)',
@@ -165,7 +165,7 @@ window.homepageContent = {
       name: 'Yujie Liu',
       position: 'Ph.D. Student',
       supervisor: 'Supervisor: Prof. Turab Lookman (Fellow of APS)',
-      badges: ['CPC Member', 'CET-6', 'GPA: 3.958/5', 'Vibe Coding', 'AI Agent', 'Materials Informatics'],
+      badges: ['CPC Member', 'CET-6', 'GPA: 3.958/5', 'ML Prediction', 'LLM Inverse Design', 'AI Agent'],
       affiliations: [
         'School of Materials Science and Engineering, Xi\'an Jiaotong University',
         'State Key Laboratory for Mechanical Behavior of Materials'
@@ -183,8 +183,8 @@ window.homepageContent = {
       about: {
         title: 'About Me',
         paragraphs: [
-          'I am a Ph.D. student (direct Ph.D. track) in the School of Materials Science and Engineering at Xi\'an Jiaotong University, supervised by **Prof. Turab Lookman** (Fellow of the American Physical Society APS, former Senior Scientist at Los Alamos National Laboratory). I received my Bachelor\'s degree in New Energy Materials and Devices from Wuhan University of Technology (recommended for exemption from the National Entrance Exam to XJTU).',
-          'My research focuses on **Materials Informatics**, **Physics-Informed Machine Learning (PINK)**, and **Large Language Models (LLMs) & AI Agents in Materials Science**. I integrate physical domain knowledge, high-throughput calculations, and generative models to accelerate property prediction, out-of-distribution (OOD) generalization, and inverse material design. I have authored papers in top journals including *Advanced Science* (first author), *Advanced Materials*, and *Applied Physics Letters*.',
+          'I am a Ph.D. student (direct Ph.D. track) in the School of Materials Science and Engineering at Xi\'an Jiaotong University, supervised by **Prof. Turab Lookman** (Fellow of the American Physical Society, APS, former Senior Scientist at Los Alamos National Laboratory). I received my Bachelor\'s degree in New Energy Materials and Devices from Wuhan University of Technology (recommended for exemption from the National Entrance Exam to XJTU).',
+          'My core research focuses on **Machine Learning Model Prediction** and **Large Language Models (LLMs) for Materials Property Prediction and Inverse Design**, closely situated within the frontier of Materials Informatics. I integrate data-driven algorithms, high-throughput calculations, and foundation models to tackle critical property prediction, out-of-distribution (OOD) generalization, and autonomous inverse design of novel inorganic materials and alloys. I have published papers in premier journals including ***Advanced Science*** (first author), ***Advanced Materials***, and ***Applied Physics Letters***.',
           'Outside academia, I am passionate about pioneering AI agent architectures and Vibe Coding workflows to build end-to-end scientific agents for workflow automation. In my spare time, I enjoy basketball and music. I warmly welcome academic discussions and collaborations!'
         ]
       },
@@ -213,14 +213,14 @@ window.homepageContent = {
         items: [
           {
             period: '2023.09 - 2025.09',
-            title: 'Interpretable Machine Learning for Lattice Thermal Conductivity Prediction and Ultralow-κ Material Design',
+            title: 'Materials Property Prediction and Inverse Design via Machine Learning and LLMs',
             role: 'Project Leader / Core Researcher',
-            content: 'Coupling domain knowledge with machine learning and LLMs for fast, accurate lattice thermal conductivity prediction and inverse design of novel ultralow-κ chalcogenides.',
-            method: 'Crystal graph convolutional networks for elastic property modeling, deep fusion of physical domain knowledge (PINK), deployment of web-based predictive tools, and LLM-assisted crystal screening.',
+            content: 'Rapid prediction of lattice thermal conductivity and elastic properties via machine learning models, and LLM-assisted inverse design of ultralow-κ chalcogenides.',
+            method: 'Crystal graph convolutional networks (GNN) and convolutional neural networks (CNN) for property modeling, combined with foundation models for crystal screening and autonomous inverse discovery.',
             results: [
               '**Liu, Y.**, et al. **LLM-Assisted Design of Ultralow-κ Chalcogenides**. ***Advanced Science***, 2026: e78175. [DOI: 10.1002/advs.78175](https://doi.org/10.1002/advs.78175) <span class="paper-tag">First Author · Top Journal</span>',
               '**Liu, Y.**, et al. **PINK: physical-informed machine learning for lattice thermal conductivity**. *Journal of Materials Informatics*, 2025, 5: 12. [DOI: 10.20517/jmi.2025.04](https://doi.org/10.20517/jmi.2025.04) | [arXiv:2503.17060](https://arxiv.org/abs/2503.17060) <span class="paper-tag">First Author</span>',
-              '**Liu, Y.**, et al. **Machine learning-driven elasticity prediction in advanced inorganic materials via convolutional neural networks**. *Acta Phys. Sin.*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">First Author</span>'
+              '**Yujie Liu#**, Zhenyu Wang#, Hang Lei#, Guoyu Zhang, Jiawei Xian, Zhibin Gao*, Jun Sun, Haifeng Song, Xiangdong Ding*. **Convolutional neural network-assisted prediction of elastic properties of inorganic crystals** (卷积神经网络辅助无机晶体弹性性质预测). *Acta Phys. Sin.*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">First Author</span>'
             ]
           },
           {
@@ -278,7 +278,7 @@ window.homepageContent = {
           '[1] **Yujie Liu**, Congran Jia, Yuzhou Hao, Xuejie Li, Yang Wang, Artem R. Oganov, Jun Sun, Xiangdong Ding, Turab Lookman*, Zhibin Gao*. **LLM-Assisted Design of Ultralow-κ Chalcogenides**. ***Advanced Science***, 2026: e78175. [DOI: 10.1002/advs.78175](https://doi.org/10.1002/advs.78175) <span class="paper-tag">First Author · Top Journal</span>',
           '[2] Turab Lookman*, **Yujie Liu**, Zhibin Gao*. **Materials Informatics: Emergence to Autonomous Discovery in the Age of AI**. ***Advanced Materials***, 2026, 38(29): e2515941. [DOI: 10.1002/adma.202515941](https://doi.org/10.1002/adma.202515941)',
           '[3] **Yujie Liu**, Xiaotian Wang, Yuzhou Hao, Xuejie Li, Jun Sun, Turab Lookman, Xiangdong Ding, Zhibin Gao*. **PINK: physical-informed machine learning for lattice thermal conductivity**. *Journal of Materials Informatics*, 2025, 5: 12. [DOI: 10.20517/jmi.2025.04](https://doi.org/10.20517/jmi.2025.04) | [arXiv:2503.17060](https://arxiv.org/abs/2503.17060) <span class="paper-tag">First Author</span>',
-          '[4] **Yujie Liu**, Zheng Wang, Hongfei Lei, Gao Zhang, Jinkang Xian, Zhibin Gao, Jun Sun, Hui Song, Xiangdong Ding*. **Machine learning-driven elasticity prediction in advanced inorganic materials via convolutional neural networks**. *Acta Phys. Sin.*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">First Author</span>',
+          '[4] **Yujie Liu#**, Zhenyu Wang#, Hang Lei#, Guoyu Zhang, Jiawei Xian, Zhibin Gao*, Jun Sun, Haifeng Song, Xiangdong Ding*. **Convolutional neural network-assisted prediction of elastic properties of inorganic crystals** (卷积神经网络辅助无机晶体弹性性质预测). *Acta Phys. Sin.*, 2025, 74(12): 120702. [DOI: 10.7498/aps.74.20250013](https://doi.org/10.7498/aps.74.20250013) <span class="paper-tag">First Author</span>',
           '[5] Yuzhou Hao, **Yujie Liu**, Xuejie Li, Turab Lookman, Xiangdong Ding, Jun Sun, Zhibin Gao*. **LLM-driven discovery for carbon allotropes with bond-network entropy**. *Applied Physics Letters*, 2026, 128(10): 102103. [DOI: 10.1063/5.0298765](https://doi.org/10.1063/5.0298765)',
           '[6] Xuejie Li, Yuzhou Hao, **Yujie Liu**, Xiaotian Wang, Turab Lookman, Jun Sun, Xiangdong Ding, Zhibin Gao*. **Same-group element replacement enhances superconductivity in clathrate-like YH4**. *The Journal of Chemical Physics*, 2025, 163(10): 104702. [DOI: 10.1063/5.0289123](https://doi.org/10.1063/5.0289123)',
           '[7] Yang Wang, Xiaotian Wang, Yuzhou Hao, Xuejie Li, **Yujie Liu**, Jun Sun, Xiangdong Ding, Zhibin Gao*. **Strain-engineering the lattice thermal conductivity of 2D kagome silica**. *Applied Physics Letters*, 2025, 126(7): 072201. [DOI: 10.1063/5.0253456](https://doi.org/10.1063/5.0253456)',
