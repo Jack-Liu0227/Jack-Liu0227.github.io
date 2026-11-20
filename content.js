@@ -27,7 +27,7 @@ window.homepageContent = {
         paragraphs: [
           '我是西安交通大学材料科学与工程学院硕博连读研究生，导师为 **Turab Lookman 教授**（美国物理学会会士 APS Fellow，前美国洛斯阿拉莫斯国家实验室资深科学家）。本科毕业于武汉理工大学新能源材料与器件专业（保研至西安交通大学）。',
           '我的主要研究方向为**机器学习模型预测**以及**大语言模型在材料中的性能预测与逆向设计**，紧密围绕材料信息学（Materials Informatics）前沿。致力于结合数据驱动算法、高通量计算与大语言模型（LLMs），解决先进金属材料与功能晶体的关键性能预测、分布外泛化（OOD）及新型材料的自主逆向发现问题。已在 ***Advanced Science***（第一作者）、***Advanced Materials***、***Applied Physics Letters*** 等顶级期刊发表多篇高水平论文。',
-          '学术之外：我热爱前沿 AI 技术的探索与 Vibe Coding 智能开发工作流，长期实践从单一 Agent 到多 Agent 协同任务看板架构，致力于打造端到端个人科研智能体（AI Agent）以实现自动化工作流；平时喜欢运动（篮球）和听音乐，保持积极乐观的生活态度。很高兴认识各位学术同仁与朋友，欢迎交流探讨！'
+          '学术之外：我热爱前沿 AI 技术的探索与 Vibe Coding 智能开发工作流，长期实践从单一 Agent 到多 Agent 协同任务看板架构，致力于打造端到端个人科研智能体（AI Agent）以实现自动化工作流，相关作品获中国教育技术协会“AI+教育”创新应用技能大赛全国二等奖；平时喜欢运动（篮球）和听音乐，保持积极乐观的生活态度。很高兴认识各位学术同仁与朋友，欢迎交流探讨！'
         ]
       },
       education: {
@@ -83,6 +83,8 @@ window.homepageContent = {
             content: '聚焦多 Agent 协同体系、交小智平台及 Scimaster 科研智能体大赛获奖成果。',
             method: '深度实践 Cursor → Augment Code → Trae/Qoder → Claude Code/Codex/Opencode → WorkBuddy → Pi → Multica/Orca/AionUI 工具链，实现任务看板驱动的端到端自动化科研流水线。',
             results: [
+              '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**：《启途智学——与AI共成长，启发新思维》（团队负责人，大学生OPC创新创业 AI Agent 赛道）',
+              '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**：《览籍智研——个人科研辅助 Agent》（团队成员，AI+教科研服务创新赛道）',
               '西安交通大学人工智能先导计划——“火山杯”（**三等奖**，2025年7月）',
               '基于交小智平台的文献调研助手（**校级三等奖**，2025年）',
               '波尔 + Scimaster 科研智能体开发大赛——文献调研到实验方案推荐一体化平台（**优秀奖**，2025年）'
@@ -116,6 +118,8 @@ window.homepageContent = {
       awards: {
         title: '荣誉奖励',
         items: [
+          { period: '2025.11', institution: '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**', detail: '作品《启途智学——与AI共成长，启发新思维》· 团队负责人 · 大学生OPC创新创业 AI Agent 赛道' },
+          { period: '2025.11', institution: '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**', detail: '作品《览籍智研——个人科研辅助 Agent》· 团队成员 · AI+教科研服务创新赛道' },
           { period: '2025.07', institution: '西安交通大学人工智能先导计划——“火山杯”三等奖', detail: '' },
           { period: '2025', institution: '波尔 + Scimaster 科研智能体开发大赛 优秀奖', detail: '文献调研到实验方案推荐一体化平台' },
           { period: '2023 — 2024', institution: '西安交通大学 校级一等学业奖学金', detail: '' },
@@ -161,7 +165,7 @@ window.homepageContent = {
         paragraphs: [
           'I am a Ph.D. student (direct Ph.D. track) in the School of Materials Science and Engineering at Xi\'an Jiaotong University, supervised by **Prof. Turab Lookman** (Fellow of the American Physical Society, APS, former Senior Scientist at Los Alamos National Laboratory). I received my Bachelor\'s degree in New Energy Materials and Devices from Wuhan University of Technology (recommended for exemption from the National Entrance Exam to XJTU).',
           'My core research focuses on **Machine Learning Model Prediction** and **Large Language Models (LLMs) for Materials Property Prediction and Inverse Design**, closely situated within the frontier of Materials Informatics. I integrate data-driven algorithms, high-throughput calculations, and foundation models to tackle critical property prediction, out-of-distribution (OOD) generalization, and autonomous inverse discovery of novel inorganic materials and alloys. I have published papers in premier journals including ***Advanced Science*** (first author), ***Advanced Materials***, and ***Applied Physics Letters***.',
-          'Outside academia, I am passionate about pioneering AI agent architectures and Vibe Coding workflows to build end-to-end scientific agents for workflow automation. In my spare time, I enjoy basketball and music. I warmly welcome academic discussions and collaborations!'
+          'Outside academia, I am passionate about pioneering AI agent architectures and Vibe Coding workflows to build end-to-end scientific agents for workflow automation; related work received a National Second Prize at the CAET "AI + Education" Innovation Application Skills Competition. In my spare time, I enjoy basketball and music. I warmly welcome academic discussions and collaborations!'
         ]
       },
       education: {
@@ -217,6 +221,8 @@ window.homepageContent = {
             content: 'Multi-agent collaborative pipelines, the Jiao-Xiao-Zhi platform assistant, and award-winning Scimaster scientific agent system.',
             method: 'Extensively leveraging: Cursor → Augment Code → Trae/Qoder → Claude Code/Codex/Opencode → WorkBuddy → Pi → Multica/Orca/AionUI for end-to-end automated research Kanban pipelines.',
             results: [
+              'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET): "Qitu Zhixue: Growing with AI, Inspiring New Thinking" (Team Leader, University OPC AI Agent Track)',
+              'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET): "Lanjing Zhiyan: Personal Research Assistant Agent" (Team Member, AI + Education & Research Service Track)',
               'AI Initiative "Volcano Cup", Xi\'an Jiaotong University (**3rd Prize**, July 2025)',
               'AI Literature Survey Assistant on Jiao-Xiao-Zhi Platform (**University 3rd Prize**, 2025)',
               'Boer + Scimaster AI Agent Development Contest: Literature-to-Experiment Platform (**Excellence Award**, 2025)'
@@ -250,6 +256,8 @@ window.homepageContent = {
       awards: {
         title: 'Honors & Awards',
         items: [
+          { period: '2025.11', institution: 'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET)', detail: '"Qitu Zhixue: Growing with AI, Inspiring New Thinking" · Team Leader · University OPC Innovation & Entrepreneurship AI Agent Track' },
+          { period: '2025.11', institution: 'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET)', detail: '"Lanjing Zhiyan: Personal Research Assistant Agent" · Team Member · AI + Education & Research Service Innovation Track' },
           { period: '2025.07', institution: '3rd Prize, AI Initiative "Volcano Cup", Xi\'an Jiaotong University', detail: '' },
           { period: '2025', institution: 'Excellence Award, Boer + Scimaster Scientific AI Agent Development Contest', detail: 'Literature-to-Experiment Integrated Platform' },
           { period: '2023 - 2024', institution: 'First-Class Academic Scholarship, Xi\'an Jiaotong University', detail: '' },
