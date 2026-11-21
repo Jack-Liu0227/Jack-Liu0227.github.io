@@ -202,6 +202,12 @@ main { min-width: 0; }
   vertical-align: middle;
 }
 
+.paper-tag.hot {
+  background: #fdf0e6;
+  color: #b4530a;
+  border-color: #f0c9a8;
+}
+
 /* History list (Awards / Education fallback) */
 .history-list { list-style: none; padding: 0; }
 .history-list li {
