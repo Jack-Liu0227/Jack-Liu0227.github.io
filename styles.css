@@ -208,6 +208,12 @@ main { min-width: 0; }
   border-color: #f0c9a8;
 }
 
+.paper-tag.review {
+  background: #f4f1fb;
+  color: #5b46a8;
+  border-color: #d9d0ef;
+}
+
 /* History list (Awards / Education fallback) */
 .history-list { list-style: none; padding: 0; }
 .history-list li {
