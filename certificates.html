@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="刘宇杰 | Yujie Liu 的荣誉奖励与证书档案">
+    <meta name="color-scheme" content="light">
+    <title>证书档案 | 刘宇杰 (Yujie Liu)</title>
+    <link rel="icon" href="assets/favicons/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-32.png" sizes="32x32">
+    <link rel="stylesheet" href="styles.css?v=20261124a">
+    <script defer src="certificates.js?v=20261124a"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#cert-main" id="cert-skip">跳到正文</a>
+    <div class="page">
+      <header class="site-header">
+        <div class="institution-logos">
+          <a href="https://www.xjtu.edu.cn/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/logos/xjtu.png" width="56" height="56" alt="西安交通大学" data-logo="xjtu">
+          </a>
+          <a href="https://www.whut.edu.cn/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/logos/whut.png" width="56" height="56" alt="武汉理工大学" data-logo="whut">
+          </a>
+        </div>
+        <h1 class="cert-page-heading" id="cert-page-heading">荣誉与证书档案</h1>
+        <button class="language-switch" id="language-switch" type="button" lang="en" aria-label="Switch to English">English</button>
+      </header>
+
+      <nav class="section-nav cert-nav" aria-label="页面导航" id="cert-nav">
+        <a href="index.html#awards" class="cert-back-link" id="cert-back-link">← 返回个人主页</a>
+        <a href="assets/certificates/Yujie_Liu_Certificates.zip" download="Yujie_Liu_Certificates.zip" class="scholar-link-btn cert-zip-btn" id="cert-zip-btn">打包下载全部证书 (.zip)</a>
+      </nav>
+
+      <main class="cert-main" id="cert-main" tabindex="-1">
+        <div class="cert-intro">
+          <p class="cert-subtitle" id="cert-subtitle"></p>
+          <div class="cert-filters" id="cert-filters" role="tablist" aria-label="证书分类筛选"></div>
+        </div>
+        <div class="cert-grid" id="cert-grid"></div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="copyright">
+          <p>&copy; 2026 Yujie Liu (刘宇杰). Powered by GitHub Pages.</p>
+        </div>
+      </footer>
+    </div>
+
+    <div class="cert-modal" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title" hidden>
+      <div class="cert-modal-backdrop" id="cert-modal-backdrop"></div>
+      <div class="cert-modal-dialog">
+        <div class="cert-modal-header">
+          <div class="cert-modal-meta">
+            <h2 class="cert-modal-title" id="cert-modal-title"></h2>
+            <p class="cert-modal-sub" id="cert-modal-sub"></p>
+          </div>
+          <button class="cert-modal-close" id="cert-modal-close" type="button" aria-label="关闭">&times;</button>
+        </div>
+        <div class="cert-modal-body">
+          <button class="cert-modal-nav prev" id="cert-modal-prev" type="button" aria-label="上一张">&#8249;</button>
+          <img class="cert-modal-img" id="cert-modal-img" alt="">
+          <button class="cert-modal-nav next" id="cert-modal-next" type="button" aria-label="下一张">&#8250;</button>
+        </div>
+        <div class="cert-modal-footer">
+          <span class="cert-modal-counter" id="cert-modal-counter"></span>
+          <a class="scholar-link-btn" id="cert-modal-download" download>下载此证书</a>
+        </div>
+      </div>
+    </div>
+
+    <noscript><p class="no-script">请启用 JavaScript 以浏览和筛选证书。 Please enable JavaScript to view certificates.</p></noscript>
+  </body>
+</html>

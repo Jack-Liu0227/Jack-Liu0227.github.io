@@ -84,11 +84,11 @@ window.homepageContent = {
             content: '聚焦多 Agent 协同体系、交小智平台及 Scimaster 科研智能体大赛获奖成果。',
             method: '深度实践 Cursor → Augment Code → Trae/Qoder → Claude Code/Codex/Opencode → WorkBuddy → Pi → Multica/Orca/AionUI 工具链，实现任务看板驱动的端到端自动化科研流水线。',
             results: [
-              '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**：《启途智学——与AI共成长，启发新思维》（团队负责人，大学生OPC创新创业 AI Agent 赛道）',
-              '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**：《览籍智研——个人科研辅助 Agent》（团队成员，AI+教科研服务创新赛道）',
-              '西安交通大学人工智能先导计划——“火山杯”（**三等奖**，2025年7月）',
-              '基于交小智平台的文献调研助手（**校级三等奖**，2025年）',
-              '波尔 + Scimaster 科研智能体开发大赛——文献调研到实验方案推荐一体化平台（**优秀奖**，2025年）'
+              '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**：《启途智学——与AI共成长，启发新思维》（团队负责人，大学生AI创新创业组 · 大学生OPC创新创业 AI Agent，2026年11月）',
+              '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**：《览籍智研——个人科研辅助 Agent》（团队成员，AI+教科研服务创新赛道，2026年11月）',
+              '玻尔 + SciMaster 科研智能体开发大赛——ResearchMind 队（**优秀奖**，2026年1月）',
+              '西安交通大学“人工智能先导计划”——“火山杯”人工智能创新大赛：《深度调研助手》（**三等奖**，科研增效赛道，2025年7月）',
+              '基于交小智平台的文献调研助手（**校级三等奖**，2025年）'
             ]
           },
           {
@@ -120,14 +120,18 @@ window.homepageContent = {
       },
       awards: {
         title: '荣誉奖励',
+        certificatesNote: '（仅展示部分代表性荣誉，全部 13 项获奖及资格证书支持在线浏览与打包下载）',
+        certificatesLinkText: '查看与下载全部证书 ↗',
+        certificatesUrl: 'certificates.html',
         items: [
-          { period: '2025.11', institution: '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**', detail: '作品《启途智学——与AI共成长，启发新思维》· 团队负责人 · 大学生OPC创新创业 AI Agent 赛道' },
-          { period: '2025.11', institution: '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**', detail: '作品《览籍智研——个人科研辅助 Agent》· 团队成员 · AI+教科研服务创新赛道' },
-          { period: '2025.07', institution: '西安交通大学人工智能先导计划——“火山杯”三等奖', detail: '' },
-          { period: '2025', institution: '波尔 + Scimaster 科研智能体开发大赛 优秀奖', detail: '文献调研到实验方案推荐一体化平台' },
+          { period: '2026.11', institution: '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**', detail: '作品《启途智学——与AI共成长，启发新思维》· 团队负责人 · 大学生AI创新创业组（大学生OPC创新创业 AI Agent）' },
+          { period: '2026.11', institution: '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**', detail: '作品《览籍智研——个人科研辅助 Agent》· 团队成员 · AI+教科研服务创新赛道' },
+          { period: '2026.01', institution: '玻尔 + SciMaster 科研智能体开发大赛 **优秀奖**', detail: 'ResearchMind 队 · 文献调研到实验方案推荐一体化平台' },
+          { period: '2025.07', institution: '西安交通大学“人工智能先导计划”——“火山杯”人工智能创新大赛 **三等奖**', detail: '作品《深度调研助手》· 科研增效赛道' },
+          { period: '2024.12', institution: '中国移动创客马拉松大赛（西安交大-中国移动数字政府联合研究院 AI+行业应用专题赛）**三等奖**', detail: '项目《智热未来——AI驱动的热界面材料创新》' },
           { period: '2023 — 2024', institution: '西安交通大学 校级一等学业奖学金', detail: '' },
           { period: '2022', institution: '国家授权发明专利：《一种基于 3D 打印的锌空气电池复合正极的制备方法》', detail: '第二发明人，已授权' },
-          { period: '2019 — 2021', institution: '国家励志奖学金（两届连获）', detail: '教育部颁发 (2019-2020, 2020-2021)' }
+          { period: '2020 — 2021', institution: '国家励志奖学金（连续两届）', detail: '武汉理工大学 (2019–2020、2020–2021 学年)' }
         ]
       }
     },
@@ -225,11 +229,11 @@ window.homepageContent = {
             content: 'Multi-agent collaborative pipelines, the Jiao-Xiao-Zhi platform assistant, and award-winning Scimaster scientific agent system.',
             method: 'Extensively leveraging: Cursor → Augment Code → Trae/Qoder → Claude Code/Codex/Opencode → WorkBuddy → Pi → Multica/Orca/AionUI for end-to-end automated research Kanban pipelines.',
             results: [
-              'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET): "Qitu Zhixue: Growing with AI, Inspiring New Thinking" (Team Leader, University OPC AI Agent Track)',
-              'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET): "Lanjing Zhiyan: Personal Research Assistant Agent" (Team Member, AI + Education & Research Service Track)',
-              'AI Initiative "Volcano Cup", Xi\'an Jiaotong University (**3rd Prize**, July 2025)',
-              'AI Literature Survey Assistant on Jiao-Xiao-Zhi Platform (**University 3rd Prize**, 2025)',
-              'Boer + Scimaster AI Agent Development Contest: Literature-to-Experiment Platform (**Excellence Award**, 2025)'
+              'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET): "Qitu Zhixue: Growing with AI, Inspiring New Thinking" (Team Leader, University OPC AI Agent Track, Nov. 2026)',
+              'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET): "Lanjing Zhiyan: Personal Research Assistant Agent" (Team Member, AI + Education & Research Service Track, Nov. 2026)',
+              'Bohr + SciMaster Scientific AI Agent Development Contest — ResearchMind Team (**Excellence Award**, Jan. 2026)',
+              'AI Initiative "Volcano Cup" AI Innovation Contest, Xi\'an Jiaotong University: "Deep Research Assistant" (**3rd Prize**, Research Efficiency Track, Jul. 2025)',
+              'AI Literature Survey Assistant on Jiao-Xiao-Zhi Platform (**University 3rd Prize**, 2025)'
             ]
           },
           {
@@ -261,14 +265,18 @@ window.homepageContent = {
       },
       awards: {
         title: 'Honors & Awards',
+        certificatesNote: '(Displaying selected honors only. Browse and download all 13 certificates in the full gallery)',
+        certificatesLinkText: 'View & Download All Certificates ↗',
+        certificatesUrl: 'certificates.html',
         items: [
-          { period: '2025.11', institution: 'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET)', detail: '"Qitu Zhixue: Growing with AI, Inspiring New Thinking" · Team Leader · University OPC Innovation & Entrepreneurship AI Agent Track' },
-          { period: '2025.11', institution: 'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET)', detail: '"Lanjing Zhiyan: Personal Research Assistant Agent" · Team Member · AI + Education & Research Service Innovation Track' },
-          { period: '2025.07', institution: '3rd Prize, AI Initiative "Volcano Cup", Xi\'an Jiaotong University', detail: '' },
-          { period: '2025', institution: 'Excellence Award, Boer + Scimaster Scientific AI Agent Development Contest', detail: 'Literature-to-Experiment Integrated Platform' },
+          { period: '2026.11', institution: 'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET)', detail: '"Qitu Zhixue: Growing with AI, Inspiring New Thinking" · Team Leader · University AI Innovation & Entrepreneurship OPC Agent Track' },
+          { period: '2026.11', institution: 'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET)', detail: '"Lanjing Zhiyan: Personal Research Assistant Agent" · Team Member · AI + Education & Research Service Innovation Track' },
+          { period: '2026.01', institution: '**Excellence Award**, Bohr + SciMaster Scientific AI Agent Development Contest', detail: 'ResearchMind Team · Literature-to-Experiment Integrated Platform' },
+          { period: '2025.07', institution: '**3rd Prize**, "Volcano Cup" AI Innovation Contest, Xi\'an Jiaotong University', detail: '"Deep Research Assistant" · Research Efficiency Track' },
+          { period: '2024.12', institution: '**3rd Prize**, China Mobile Maker Marathon (XJTU–China Mobile Joint Research Institute AI+ Industry Application Track)', detail: '"Smart Thermal Future: AI-Driven Innovation in Thermal Interface Materials"' },
           { period: '2023 - 2024', institution: 'First-Class Academic Scholarship, Xi\'an Jiaotong University', detail: '' },
           { period: '2022', institution: 'Authorized National Invention Patent: A method for preparing 3D-printed composite cathode for zinc-air batteries', detail: 'Second Inventor, Granted' },
-          { period: '2019 - 2021', institution: 'National Encouragement Scholarship (Consecutive 2 Years)', detail: 'Ministry of Education of China (2019-2020, 2020-2021)' }
+          { period: '2020 - 2021', institution: 'National Encouragement Scholarship (Consecutive 2 Years)', detail: 'Wuhan University of Technology (2019–2020, 2020–2021)' }
         ]
       }
     },

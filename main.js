@@ -296,6 +296,18 @@
         return item;
       }));
       section.append(list);
+
+      // Full certificates gallery & download link
+      if (data.certificatesUrl) {
+        const footerBox = element('div', undefined, 'scholar-container');
+        if (data.certificatesNote) {
+          footerBox.append(element('div', data.certificatesNote, 'scholar-note'));
+        }
+        const btn = element('a', data.certificatesLinkText || 'Certificates', 'scholar-link-btn');
+        btn.href = data.certificatesUrl;
+        footerBox.append(btn);
+        section.append(footerBox);
+      }
     }
     return section;
   }
