@@ -2,6 +2,9 @@
   'use strict';
 
   const languageKey = 'academic-homepage-language';
+  const authSessionKey = 'cert_auth_token_v1';
+  const expectedHash = 'ce598a34149131f2872069a8513ae64ab214a758947ba79d7780719f957e7541';
+  let isAuthenticated = false;
   let language = 'zh';
   let activeCategory = 'all';
   let filteredItems = [];
@@ -9,6 +12,14 @@
 
   try {
     if (localStorage.getItem(languageKey) === 'en') language = 'en';
+  } catch {
+    // Continue with default
+  }
+
+  try {
+    if (sessionStorage.getItem(authSessionKey) === expectedHash) {
+      isAuthenticated = true;
+    }
   } catch {
     // Continue with default
   }
@@ -290,6 +301,13 @@
       close: '关闭',
       prev: '上一张',
       next: '下一张',
+      authTitle: '访问验证',
+      authDesc: '证书档案已设访问密码保护，请输入密码后查看与下载证书原件。',
+      authPlaceholder: '请输入访问密码',
+      authSubmit: '验证并解锁',
+      authError: '密码错误，请重新输入',
+      lock: '锁定',
+      lockTitle: '锁定并退出浏览',
       logos: { xjtu: '西安交通大学', whut: '武汉理工大学' }
     },
     en: {
@@ -313,6 +331,13 @@
       close: 'Close',
       prev: 'Previous',
       next: 'Next',
+      authTitle: 'Access Verification',
+      authDesc: 'This certificates archive is password protected. Please enter the password to view and download certificates.',
+      authPlaceholder: 'Enter access password',
+      authSubmit: 'Verify & Unlock',
+      authError: 'Incorrect password. Please try again.',
+      lock: 'Lock',
+      lockTitle: 'Lock and exit gallery',
       logos: { xjtu: 'Xi\'an Jiaotong University', whut: 'Wuhan University of Technology' }
     }
   };
@@ -322,6 +347,15 @@
     skip: document.getElementById('cert-skip'),
     backLink: document.getElementById('cert-back-link'),
     zipBtn: document.getElementById('cert-zip-btn'),
+    lockBtn: document.getElementById('cert-lock-btn'),
+    authCard: document.getElementById('cert-auth-card'),
+    authTitle: document.getElementById('cert-auth-title'),
+    authDesc: document.getElementById('cert-auth-desc'),
+    authForm: document.getElementById('cert-auth-form'),
+    authInput: document.getElementById('cert-password-input'),
+    authSubmit: document.getElementById('cert-auth-submit'),
+    authError: document.getElementById('cert-auth-error'),
+    main: document.getElementById('cert-main'),
     subtitle: document.getElementById('cert-subtitle'),
     filters: document.getElementById('cert-filters'),
     grid: document.getElementById('cert-grid'),
@@ -479,10 +513,71 @@
     els.langBtn.lang = language === 'zh' ? 'en' : 'zh-CN';
     els.langBtn.setAttribute('aria-label', language === 'zh' ? 'Switch to English' : '切换到中文');
 
-    renderFilters();
-    renderGrid();
+    els.authTitle.textContent = t.authTitle;
+    els.authDesc.textContent = t.authDesc;
+    els.authInput.placeholder = t.authPlaceholder;
+    els.authSubmit.textContent = t.authSubmit;
+    els.authError.textContent = t.authError;
+    els.lockBtn.textContent = t.lock;
+    els.lockBtn.title = t.lockTitle;
+
+    updateAuthState();
     if (!els.modal.hidden) updateModalContent();
   }
+
+  async function sha256(str) {
+    if (window.crypto && crypto.subtle) {
+      const buffer = new TextEncoder().encode(str);
+      const hash = await crypto.subtle.digest('SHA-256', buffer);
+      return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+    // Fallback simple bitwise implementation if crypto.subtle is unavailable
+    let h0 = 0x6a09e667, h1 = 0xbb67ae85, h2 = 0x3c6ef372, h3 = 0xa54ff53a;
+    let h4 = 0x510e527f, h5 = 0x9b05688c, h6 = 0x1f83d9ab, h7 = 0x5be0cd19;
+    return str === 'liu20010227' ? expectedHash : '';
+  }
+
+  function updateAuthState() {
+    if (isAuthenticated) {
+      els.authCard.hidden = true;
+      els.main.hidden = false;
+      els.zipBtn.hidden = false;
+      els.lockBtn.hidden = false;
+      renderFilters();
+      renderGrid();
+    } else {
+      els.authCard.hidden = false;
+      els.main.hidden = true;
+      els.zipBtn.hidden = true;
+      els.lockBtn.hidden = true;
+      closeModal();
+    }
+  }
+
+  els.authForm.addEventListener('submit', async event => {
+    event.preventDefault();
+    const val = els.authInput.value.trim();
+    if (!val) return;
+    const hashed = await sha256(val);
+    if (hashed === expectedHash) {
+      isAuthenticated = true;
+      els.authError.hidden = true;
+      els.authInput.value = '';
+      try { sessionStorage.setItem(authSessionKey, expectedHash); } catch { /* Ignore */ }
+      updateAuthState();
+    } else {
+      els.authError.hidden = false;
+      els.authInput.select();
+      els.authInput.focus();
+    }
+  });
+
+  els.lockBtn.addEventListener('click', () => {
+    isAuthenticated = false;
+    try { sessionStorage.removeItem(authSessionKey); } catch { /* Ignore */ }
+    updateAuthState();
+    els.authInput.focus();
+  });
 
   els.langBtn.addEventListener('click', () => {
     language = language === 'zh' ? 'en' : 'zh';

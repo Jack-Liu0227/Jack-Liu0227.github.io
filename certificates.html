@@ -8,8 +8,8 @@
     <title>证书档案 | 刘宇杰 (Yujie Liu)</title>
     <link rel="icon" href="assets/favicons/favicon.ico" sizes="16x16 32x32 48x48">
     <link rel="icon" type="image/png" href="assets/favicons/favicon-32.png" sizes="32x32">
-    <link rel="stylesheet" href="styles.css?v=20261124b">
-    <script defer src="certificates.js?v=20261124b"></script>
+    <link rel="stylesheet" href="styles.css?v=20261124c">
+    <script defer src="certificates.js?v=20261124c"></script>
   </head>
   <body>
     <a class="skip-link" href="#cert-main" id="cert-skip">跳到正文</a>
@@ -29,10 +29,26 @@
 
       <nav class="section-nav cert-nav" aria-label="页面导航" id="cert-nav">
         <a href="index.html#awards" class="cert-back-link" id="cert-back-link">← 返回个人主页</a>
-        <a href="assets/certificates/Yujie_Liu_Certificates.zip" download="Yujie_Liu_Certificates.zip" class="scholar-link-btn cert-zip-btn" id="cert-zip-btn">打包下载全部证书 (.zip)</a>
+        <div class="cert-nav-actions" id="cert-nav-actions">
+          <a href="assets/certificates/Yujie_Liu_Certificates.zip" download="Yujie_Liu_Certificates.zip" class="scholar-link-btn cert-zip-btn" id="cert-zip-btn" hidden>打包下载全部证书 (.zip)</a>
+          <button type="button" class="cert-lock-btn" id="cert-lock-btn" title="锁定查看" hidden>锁定</button>
+        </div>
       </nav>
 
-      <main class="cert-main" id="cert-main" tabindex="-1">
+      <section class="cert-auth-card" id="cert-auth-card">
+        <div class="cert-auth-icon">🔒</div>
+        <h2 class="cert-auth-title" id="cert-auth-title">访问验证</h2>
+        <p class="cert-auth-desc" id="cert-auth-desc">证书档案已设访问密码保护，请输入密码后查看与下载证书原件。</p>
+        <form class="cert-auth-form" id="cert-auth-form" autocomplete="off">
+          <div class="cert-auth-input-wrap">
+            <input type="password" id="cert-password-input" class="cert-auth-input" placeholder="请输入访问密码" required autofocus>
+            <button type="submit" class="scholar-link-btn cert-auth-submit" id="cert-auth-submit">验证并解锁</button>
+          </div>
+          <p class="cert-auth-error" id="cert-auth-error" hidden>密码错误，请重新输入</p>
+        </form>
+      </section>
+
+      <main class="cert-main" id="cert-main" tabindex="-1" hidden>
         <div class="cert-intro">
           <p class="cert-subtitle" id="cert-subtitle"></p>
           <div class="cert-filters" id="cert-filters" role="tablist" aria-label="证书分类筛选"></div>
