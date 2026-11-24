@@ -87,8 +87,7 @@ window.homepageContent = {
               '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**：《启途智学——与AI共成长，启发新思维》（团队负责人，大学生AI创新创业组 · 大学生OPC创新创业 AI Agent，2026年11月）',
               '“AI+教育”创新应用技能大赛（中国教育技术协会）全国**二等奖**：《览籍智研——个人科研辅助 Agent》（团队成员，AI+教科研服务创新赛道，2026年11月）',
               '玻尔 + SciMaster 科研智能体开发大赛——ResearchMind 队（**优秀奖**，2026年1月）',
-              '西安交通大学“人工智能先导计划”——“火山杯”人工智能创新大赛：《深度调研助手》（**三等奖**，科研增效赛道，2025年7月）',
-              '基于交小智平台的文献调研助手（**校级三等奖**，2025年）'
+              '西安交通大学“人工智能先导计划”——“火山杯”人工智能创新大赛（交小智平台）：《深度调研助手》（**三等奖**，科研增效赛道，2025年7月）'
             ]
           },
           {
@@ -232,8 +231,7 @@ window.homepageContent = {
               'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET): "Qitu Zhixue: Growing with AI, Inspiring New Thinking" (Team Leader, University OPC AI Agent Track, Nov. 2026)',
               'National **Second Prize**, "AI + Education" Innovation Application Skills Competition (CAET): "Lanjing Zhiyan: Personal Research Assistant Agent" (Team Member, AI + Education & Research Service Track, Nov. 2026)',
               'Bohr + SciMaster Scientific AI Agent Development Contest — ResearchMind Team (**Excellence Award**, Jan. 2026)',
-              'AI Initiative "Volcano Cup" AI Innovation Contest, Xi\'an Jiaotong University: "Deep Research Assistant" (**3rd Prize**, Research Efficiency Track, Jul. 2025)',
-              'AI Literature Survey Assistant on Jiao-Xiao-Zhi Platform (**University 3rd Prize**, 2025)'
+              'AI Initiative "Volcano Cup" AI Innovation Contest (Jiao-Xiao-Zhi Platform), Xi\'an Jiaotong University: "Deep Research Assistant" (**3rd Prize**, Research Efficiency Track, Jul. 2025)'
             ]
           },
           {

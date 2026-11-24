@@ -78,12 +78,12 @@
       zh: {
         title: '西安交通大学“火山杯”人工智能创新大赛 三等奖',
         issuer: '西安交通大学“人工智能先导计划”竞赛组委会',
-        detail: '作品《深度调研助手》· 科研增效赛道'
+        detail: '作品《深度调研助手》（基于交小智平台文献调研助手）· 科研增效赛道'
       },
       en: {
         title: 'Third Prize — XJTU "Volcano Cup" AI Innovation Contest',
         issuer: 'Xi\'an Jiaotong University AI Pioneer Initiative Committee',
-        detail: '"Deep Research Assistant" · Research Efficiency Track'
+        detail: '"Deep Research Assistant" (Literature Survey Assistant on Jiao-Xiao-Zhi Platform) · Research Efficiency Track'
       }
     },
     {
