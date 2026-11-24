@@ -120,7 +120,7 @@ window.homepageContent = {
       },
       awards: {
         title: '荣誉奖励',
-        certificatesNote: '（仅展示部分代表性荣誉，全部 13 项获奖及资格证书支持在线浏览与打包下载）',
+        certificatesNote: '（仅展示部分代表性荣誉，全部 14 项获奖及资格证书支持在线浏览与打包下载）',
         certificatesLinkText: '查看与下载全部证书 ↗',
         certificatesUrl: 'certificates.html',
         items: [
@@ -265,7 +265,7 @@ window.homepageContent = {
       },
       awards: {
         title: 'Honors & Awards',
-        certificatesNote: '(Displaying selected honors only. Browse and download all 13 certificates in the full gallery)',
+        certificatesNote: '(Displaying selected honors only. Browse and download all 14 certificates in the full gallery)',
         certificatesLinkText: 'View & Download All Certificates ↗',
         certificatesUrl: 'certificates.html',
         items: [

@@ -87,6 +87,24 @@
       }
     },
     {
+      id: 'ai-information-literacy',
+      category: 'competition',
+      date: '2025.10',
+      file: 'assets/certificates/2025_10_xjtu_ai_information_literacy.jpg',
+      downloadName: '2025-10_XJTU_AI-Information-Literacy_Excellence-Award.jpg',
+      redacted: false,
+      zh: {
+        title: '2025年大学生“AI+信息素养”大赛西安交通大学校赛 优秀奖',
+        issuer: '西安交通大学图书馆',
+        detail: '在“2025年大学生‘AI+信息素养’大赛西安交通大学校赛”中荣获优秀奖'
+      },
+      en: {
+        title: 'Excellence Award — 2025 University "AI + Information Literacy" Competition (XJTU Campus Contest)',
+        issuer: 'Xi\'an Jiaotong University Library',
+        detail: 'Recognized with Excellence Award in the 2025 "AI + Information Literacy" Competition at XJTU'
+      }
+    },
+    {
       id: 'china-mobile-hackathon',
       category: 'competition',
       date: '2024.12',
@@ -258,7 +276,7 @@
       skip: '跳到正文',
       back: '← 返回个人主页',
       zipBtn: '打包下载全部证书 (.zip)',
-      subtitle: '共收录 13 项竞赛获奖、奖学金荣誉及语言技能证书，支持点击查看大图、单份下载及一键打包下载。涉及个人身份证号与校验码的证书已作隐私脱敏处理。',
+      subtitle: '共收录 14 项竞赛获奖、奖学金荣誉及语言技能证书，支持点击查看大图、单份下载及一键打包下载。涉及个人身份证号与校验码的证书已作隐私脱敏处理。',
       categories: {
         all: '全部证书',
         competition: '竞赛获奖',
@@ -281,7 +299,7 @@
       skip: 'Skip to content',
       back: '← Back to Homepage',
       zipBtn: 'Download All Certificates (.zip)',
-      subtitle: 'Archive of 13 competition awards, scholarships, and qualification certificates with full-size preview, individual download, and one-click ZIP archive. Personal ID and verification codes have been redacted for privacy.',
+      subtitle: 'Archive of 14 competition awards, scholarships, and qualification certificates with full-size preview, individual download, and one-click ZIP archive. Personal ID and verification codes have been redacted for privacy.',
       categories: {
         all: 'All',
         competition: 'Competitions',
